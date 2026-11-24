@@ -1,0 +1,785 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-tint": "#566247",
+          "surface-container-high": "#ebe8da",
+          "surface-bright": "#fcfaeb",
+          "surface-container": "#f1eee0",
+          "secondary": "#586249",
+          "on-primary-fixed": "#141f09",
+          "on-tertiary-fixed": "#241a0a",
+          "on-secondary-fixed": "#161e0b",
+          "error": "#ba1a1a",
+          "inverse-primary": "#becbaa",
+          "error-container": "#ffdad6",
+          "surface-variant": "#e5e3d5",
+          "on-tertiary-container": "#d4c0a7",
+          "primary": "#313d25",
+          "secondary-fixed": "#dce7c7",
+          "outline-variant": "#c6c8bd",
+          "on-secondary-fixed-variant": "#404a33",
+          "on-surface-variant": "#454840",
+          "tertiary-fixed-dim": "#d8c3aa",
+          "on-error": "#ffffff",
+          "on-error-container": "#93000a",
+          "on-primary-fixed-variant": "#3f4b31",
+          "secondary-fixed-dim": "#c0cbac",
+          "on-primary-container": "#bac8a7",
+          "tertiary-fixed": "#f5dfc5",
+          "surface-container-highest": "#e5e3d5",
+          "primary-fixed": "#dae7c5",
+          "on-secondary": "#ffffff",
+          "tertiary": "#443725",
+          "on-surface": "#1c1c14",
+          "outline": "#76786f",
+          "inverse-surface": "#313128",
+          "tertiary-container": "#5c4e3a",
+          "on-background": "#1c1c14",
+          "background": "#fcfaeb",
+          "on-secondary-container": "#5e684f",
+          "primary-container": "#48543a",
+          "surface-container-low": "#f7f4e6",
+          "surface": "#fcfaeb",
+          "secondary-container": "#dce7c7",
+          "inverse-on-surface": "#f4f1e3",
+          "on-tertiary-fixed-variant": "#524531",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#dddacd",
+          "on-primary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "primary-fixed-dim": "#becbaa"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "margin": "3rem",
+          "gutter": "1.5rem",
+          "space-xl": "3rem",
+          "space-lg": "1.75rem",
+          "margin-mobile": "1.25rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem"
+        },
+        "fontFamily": {
+          "subheading": [
+            "Playfair Display"
+          ],
+          "eyebrow": [
+            "Manrope"
+          ],
+          "display-hero-mobile": [
+            "Playfair Display"
+          ],
+          "display-hero": [
+            "Playfair Display"
+          ],
+          "headline-sm": [
+            "Playfair Display"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "headline-lg-mobile": [
+            "Playfair Display"
+          ],
+          "body-lg": [
+            "Manrope"
+          ],
+          "headline-md": [
+            "Playfair Display"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "headline-lg": [
+            "Playfair Display"
+          ],
+          "body-md": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "subheading": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "eyebrow": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.18em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><div class="w-full bg-primary-container text-on-primary text-center py-2 px-margin-mobile md:px-margin"><p class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-primary">Thoughtfully curated for your spaces. A little green. A little glow. A lot of calm.</p></div><header class="sticky top-0 w-full z-40 bg-surface/90 backdrop-blur-xl shadow-[0_12px_32px_-4px_rgba(41,41,32,0.07)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-xl">spa</span></div><a class="flex flex-col" data-path="home" href="#"><span class="font-headline-sm text-headline-sm tracking-wide text-primary uppercase">The Calm Corner</span><span class="font-eyebrow text-eyebrow text-on-surface-variant uppercase tracking-widest">Botanicals &amp; Soy Lights</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="py-1 transition-colors text-primary font-semibold border-b-2 border-primary" data-path="shop-all" href="#">Shop All</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="the-green-edit-plants" href="#">The Green Edit</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="the-glow-edit-candles" href="#">The Glow Edit</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="the-calm-duo-combos" href="#">The Calm Duo</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="our-story" href="#">Our Story</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-2 py-1 rounded-full bg-surface-container-low text-on-surface"><span class="font-label-sm text-label-sm font-semibold">INR ₹</span></div><button aria-label="Search" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">search</span></button><a aria-label="Account" class="p-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="account" href="#"><span class="material-symbols-outlined">person</span></a><a aria-label="Wishlist" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined">favorite</span><span class="absolute top-1 right-1 w-4 h-4 bg-tertiary-container text-on-tertiary rounded-full font-label-sm text-[10px] flex items-center justify-center">2</span></a><button aria-label="Bag" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary rounded-full font-label-sm text-[10px] flex items-center justify-center">3</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrA4UuVqW7H1LSmHGvuzcm6r7JdV0GOtGTz9y86vDo8PnjH5zpY8A2K62GG9M_j9ur6OAcnmafNVRb7JAPL8sclUVBsXhbxuRVjikExNUqBIgts-I7x_WyXxsQTG3z2566pEnjWQ1oAx1WZ7Ex_rREw9laVExHgsfL_XyiFZSB4noAoKOSxKdBYO1Isb9HiiQk3LOUi_8qHdHPqGjmUSOxP0UDEJVqCIZVwukfqPYViP8zQbHXkuMHdAtmfj"></div></div></header><main class="w-full bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Editorial Banner & Ethos -->
+<section class="w-full bg-surface-container-low py-space-md px-margin-mobile md:px-margin">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-2xl">local_shipping</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Regional Plant Courier:</span> Live potted foliage delivered via climate-cushioned transit exclusively in <strong class="underline decoration-secondary-fixed-dim">Bengaluru</strong>. Candles &amp; botanicals travel PAN-India.
+        </p>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">eco</span> 100% Recyclable Packaging</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">nest_eco_leaf</span> Non-GMO Soy Wax</span>
+</div>
+</div>
+</section>
+<!-- Title & Philosophy Vignette -->
+<section class="w-full bg-surface py-space-xl px-margin-mobile md:px-margin">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase">The Curated Catalog</span>
+<span class="w-8 h-[1px] bg-secondary/40 inline-block"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autumn / Winter Rituals</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight">
+          Botanicals &amp; Soy Lights
+        </h1>
+<p class="font-subheading text-subheading text-on-surface-variant max-w-2xl">
+          Quiet accompaniments for work tables, sunny sills, and slow evenings. Organic textures hand-poured and repotted in our Bengaluru studio.
+        </p>
+</div>
+<!-- Quick Ethos Strip (Mirroring user reference card) -->
+<div class="lg:col-span-4 bg-surface-container-high rounded-xl p-space-md shadow-sm flex flex-col justify-center gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">spa</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Our Simple Truth</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+          "A touch of green that brings nature indoors. A gentle glow that adds warmth. And a little more calm in everyday life."
+        </p>
+</div>
+</div>
+<!-- Collection Category Navigation Tabs -->
+<div class="max-w-7xl mx-auto mt-space-lg flex items-center gap-space-xs overflow-x-auto pb-2 scrollbar-none" id="collection-tabs">
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap transition-all shadow-sm flex items-center gap-2">
+<span>All Creations</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 text-xs">24</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">potted_plant</span>
+<span>The Green Edit — Live Plants</span>
+<span class="text-on-surface-variant text-xs">(8)</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">psychiatry</span>
+<span>Artificial Botanicals</span>
+<span class="text-on-surface-variant text-xs">(6)</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">candle</span>
+<span>The Glow Edit — Soy Candles</span>
+<span class="text-on-surface-variant text-xs">(7)</span>
+</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">featured_seasonal_and_gifts</span>
+<span>The Calm Duos</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-primary font-semibold text-[10px]">GIFTING</span>
+</button>
+</div>
+</section>
+<!-- Main Catalog Space: Filter Sidebar + Gallery -->
+<section class="w-full bg-surface px-margin-mobile md:px-margin pb-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT SIDEBAR: Deep Filter Column -->
+<aside class="lg:col-span-3 flex flex-col gap-space-lg">
+<!-- Active Filter Tags & Reset -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Active Refinements</span>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-error underline transition-colors">Clear All</button>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+              In Stock <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+              Ceramic Pot <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</span>
+</div>
+</div>
+<!-- Filter Section 1: In-Stock & Logistics -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Fulfillment &amp; City</span>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Bengaluru Same-Day</span>
+</div>
+<span class="material-symbols-outlined text-primary text-sm">bolt</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Ready to Ship</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">19</span>
+</label>
+</div>
+<!-- Filter Section 2: Botanical Light & Placement -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Plant Care &amp; Sunlight</span>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between text-body-md text-on-surface hover:text-primary cursor-pointer">
+<span class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary" type="checkbox">
+                Low Light / Indirect Shadow
+              </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">5</span>
+</label>
+<label class="flex items-center justify-between text-body-md text-on-surface hover:text-primary cursor-pointer">
+<span class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary" type="checkbox">
+                Bright Indirect Sun
+              </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">7</span>
+</label>
+<label class="flex items-center justify-between text-body-md text-on-surface hover:text-primary cursor-pointer">
+<span class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary" type="checkbox">
+                Pet-Safe Foliage
+              </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">4</span>
+</label>
+<label class="flex items-center justify-between text-body-md text-on-surface hover:text-primary cursor-pointer">
+<span class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary" type="checkbox">
+                Compact Desk Sized
+              </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">9</span>
+</label>
+</div>
+</div>
+<!-- Filter Section 3: Candle Scent Profile -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Aroma Notes</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-left font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span>Lavender Fog</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-left font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span>Warm Vanilla</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-left font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span>Citrus Zest</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-left font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span>Cedar Amber</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+</button>
+</div>
+</div>
+<!-- Filter Section 4: Price Range Slider -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Price Range</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">₹599 — ₹3,850</span>
+</div>
+<input class="w-full accent-primary h-1 bg-surface-container-highest rounded cursor-pointer" max="4999" min="499" type="range" value="3850">
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>₹499</span>
+<span>₹5,000+</span>
+</div>
+</div>
+<!-- Planter Ceramic Texture Preference -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<span class="font-eyebrow text-eyebrow text-primary uppercase">Vessel Ceramic Finish</span>
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input checked="" class="accent-primary" name="finish" type="radio">
+<span>Speckled Sandstone (Matte)</span>
+</label>
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input class="accent-primary" name="finish" type="radio">
+<span>Raw Terracotta Hearth</span>
+</label>
+<label class="flex items-center gap-2 text-body-sm text-on-surface cursor-pointer">
+<input class="accent-primary" name="finish" type="radio">
+<span>Amber Borosilicate Glass</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- RIGHT COLUMN: Catalog Display Area -->
+<main class="lg:col-span-9 flex flex-col gap-space-md">
+<!-- Top Tool Bar: Count, Sort, Grid View -->
+<div class="w-full p-space-sm px-space-md rounded-xl bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Showing 8 of 24 creations</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted in small batches</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="sort-select">Sort by:</label>
+<select class="bg-surface-container rounded-lg px-3 py-1.5 font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer" id="sort-select">
+<option>Curated Essentials</option>
+<option>Best Selling Rituals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Latest Additions</option>
+</select>
+</div>
+<!-- View Switcher -->
+<div class="hidden sm:flex items-center gap-1 bg-surface-container p-1 rounded-lg">
+<button class="p-1 rounded bg-surface text-primary shadow-xs" title="3 Columns View">
+<span class="material-symbols-outlined text-base">grid_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface/50 text-on-surface-variant" title="Wide View">
+<span class="material-symbols-outlined text-base">view_column</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PRODUCT GRID (High tactile aesthetic cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- PRODUCT CARD 1: Golden Pothos Live Plant -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-xs">
+                Live Plant
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A lush heartleaf pothos houseplant spilling gently over a speckled matte cream ceramic planter, set on a warm sunlit ash wood windowsill with soft morning shadows, minimal Scandinavian and Japandi botanical aesthetic, warm ivory and sage green tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg4CqORCfXlkaSY7YHXPN8ZsppR-ikV5WYJ5_4o1dTqF9JC5Oc4u4TIrXfFB3U5hp1D0nsfJ0D9h2NflO_9t-TFsvS93KoGNTjo7siprvOTBbUEDhKZwN3KYbpWwHOyXqAgZbaEGQP0BicK6UEku-5wjiUzH05VRG4XntUyC6m2SJYUqwU6dyLLxuiFFazSYHNKRXhEC3d-cNRQtoRpR8JYyJ0eG0UuN42c_cKh2y_">
+<!-- Quick Interaction Layer -->
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase tracking-widest">Easy Care • Air Purifying</span>
+<div class="flex items-center text-amber-700 text-xs">
+<span class="material-symbols-outlined text-xs fill-1">star</span>
+<span class="font-label-sm text-label-sm ml-0.5 font-semibold text-on-surface">4.9</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  Golden Pothos &amp; Sandstone Pot
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  Ht: 28cm • 4.5" Hand-thrown Ceramic Vessel
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹1,250</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium">Bengaluru Hand Delivered</span>
+</div>
+<button aria-label="Add Golden Pothos to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 2: Hand-Poured Lavender Soy Candle -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md text-tertiary font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-xs">
+                100% Soy Wax
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A heavy frosted amber glass candle with warm soy wax burning with an intimate amber flame, surrounded by dried french lavender sprigs on a warm tactile travertine coaster, soft linen background with golden hour warmth, serene still life photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdcov6tQ_SvKCykKHOLLV3CV-_HPkNWweRmmLf0MBUJeA34i6wizhjxBegU2bC6wB-MbBav2gVgts8woH11W2csXvR04OtEZjPYTjH3ez1vSmj9vIBfzoOzs4pZtpgmNtYK-SJJOpXmre1HFQ76ENl1Ige3p3rNMwZQobGtI471KtwuEhTbf-RvzxNBpHKVomyQYv-bK8stbV1uOAOXd_NEtChR2eveH7_GaGQ1fRm">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-tertiary uppercase tracking-widest">45 Hours Burn • Aromatherapy</span>
+<div class="flex items-center text-amber-700 text-xs">
+<span class="material-symbols-outlined text-xs fill-1">star</span>
+<span class="font-label-sm text-label-sm ml-0.5 font-semibold text-on-surface">5.0</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  Velvet Lavender &amp; Cedarwood
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  220g • Organic Cotton Wick • PAN India
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹950</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Includes Matchbook</span>
+</div>
+<button aria-label="Add Lavender Candle to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 3: Curated Gift Duo (Plant + Candle) -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-xs">
+                Signature Calm Duo
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="An artisanal kraft gift unboxing box containing a variegated marble queen pothos in a speckled ceramic planter nestled beside a warm amber glass scented soy candle, adorned with tied sage green linen ribbon and shredded natural crinkle paper, top-down perspective, warm studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjcF70eY6vpaCp8cTKuHqgqzd8PyGhxmpMw4bV7xQiXZ7YIhEeC2tC1qViqyqOc6Qcj-4ys7EPaAZtKD7mRMBRLeN0zwF9_Kq-wZq6PJCohVXfO_mMessoFUsJbAgmtjHAjN1wDN4SyEaD5ziz6yK8pTRkU2BYVikUYkwNw_X9c0-yjguStNJyqxxAxY5lX5a-1rx9CdkIy6awJeVf_Tr1r6OQ9xF4ToR1-qcsI-F">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-low">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase tracking-widest">Complete Serenity Kit</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-primary font-label-sm text-[10px] font-semibold">SAVE 15%</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  The Desk Sanctuary Duo
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  Jade Pothos + Vanilla Bean Soy Tumbler
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹1,999</span>
+<span class="font-body-sm text-body-sm text-outline line-through">₹2,350</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-medium">Deluxe Gift Box Included</span>
+</div>
+<button aria-label="Add Desk Sanctuary Duo to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 4: Artificial Fiddle Leaf Fig Stems -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-xs">
+                Zero Care Botanical
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Hyper-realistic artificial fiddle leaf fig branch with large veined matte green leaves arranged inside a tall minimalist stoneware vase on a calm beige background with soft daylight and airy architectural composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUdyoLw9RVhgXP1NgptdQlOQ3HwRFzJdbtMI4jkhoME11LMn8CqOuZ1n5MJbuG1C2bdCbbpH-KW2mlfokZ08g2L-dG1dtGm142iMTwwy8WNwHx2MMatZHerjZSnz9Dv888nUWi1-vzbikywwHc6n_eNDgQyQmAoNOFMB2EuAgjckRt5NTd8GEYRV8_ExGVyDzzr4bP38If16P33Y_Mc3A0Cq2eqRbxMrVtUKNzx_rH">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase tracking-widest">Lifelike Texture • Forever Green</span>
+<div class="flex items-center text-amber-700 text-xs">
+<span class="material-symbols-outlined text-xs fill-1">star</span>
+<span class="font-label-sm text-label-sm ml-0.5 font-semibold text-on-surface">4.8</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  Fiddle Leaf Stems in Stoneware
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  Ht: 45cm • Requires No Sunlight or Water
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹1,650</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium">Pan-India Express Safe Shipping</span>
+</div>
+<button aria-label="Add Fiddle Stems to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 5: Wild Citrus & Neroli Soy Candle -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md text-tertiary font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-xs">
+                Essential Oils
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A clean matte white ceramic container candle lit beside dried orange slices and fresh neroli blossoms on an organic linen placemat, bright natural light streaming from the side, clean tranquil editorial mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbsK1T41sQVm5MXfDCSueAi7DB4F-hkRDQBpXBuMq-6fPXx3V0WtXDbe86tN-HzV3-rgD5QYE2Nm71zkgjpMxf2OQiR3bsiKWhbTGiSuscC8hu7R72pHSAWWt02wCQcP_rMoabQ-BVDRD6gcdFasGWoHhsAmlwV4an7p4K1Lp3cREMbo0ZIE68SQM3Qz6mKfpkglFJdwjjc8TblMU9520zZWQBmH0srJ9ddkDRI9qA">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-tertiary uppercase tracking-widest">Uplifting Notes • Day Ritual</span>
+<div class="flex items-center text-amber-700 text-xs">
+<span class="material-symbols-outlined text-xs fill-1">star</span>
+<span class="font-label-sm text-label-sm ml-0.5 font-semibold text-on-surface">4.9</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  Sweet Neroli &amp; Clementine
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  180g • Double Wick • Reusable Cup
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹880</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Pan-India Transit</span>
+</div>
+<button aria-label="Add Citrus Candle to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 6: Snake Plant Zeylanica (Live) -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-surface-bright/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold shadow-xs">
+                Live Plant
+              </span>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-bright/80 backdrop-blur-md text-on-surface hover:text-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="An architectural Sansevieria snake plant standing upright in a ribbed terracotta planter pot placed on a polished warm concrete floor, warm ambient room light, soft shadows, serene botanical interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgPmIiqMWUhuMe5pONoDbQAuHNuMtRGr3-u_IgWviZRaumaQml4zOQdc5drVJJvB2-XGJo6PqbAhts20vHhP1SyJY0dy0toyqa_37Gus8xXh-Buknn-JexAo72bteBejo1lMa0yxWqIskZj5GehEPkJyDak0eCaASBCw5yYmuTvrm8I7GI0UHrEjOhcHIxmqJKGHhxwBnqd5cgk-8j_EHciltgWBd7O7n9HR0SXCPF">
+<div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm">
+                  Quick View
+                </button>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase tracking-widest">Hard to Kill • Bedroom Plant</span>
+<div class="flex items-center text-amber-700 text-xs">
+<span class="material-symbols-outlined text-xs fill-1">star</span>
+<span class="font-label-sm text-label-sm ml-0.5 font-semibold text-on-surface">4.95</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+                  Snake Zeylanica in Terracotta
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  Ht: 35cm • Low Light &amp; Oxygen Releasing
+                </p>
+</div>
+<div class="pt-space-sm mt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">₹1,100</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium">Bengaluru Direct Delivery</span>
+</div>
+<button aria-label="Add Snake Plant to bag" class="p-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary transition-colors flex items-center justify-center shadow-sm" title="Add to Cart"><span class="material-symbols-outlined text-lg">shopping_bag</span></button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination & Load More Experience -->
+<div class="w-full mt-space-lg flex flex-col items-center gap-space-sm">
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold">1</button>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md">2</button>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md">3</button>
+<button class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Showing 6 of 24 intentional creations</p>
+</div>
+</main>
+</div>
+</section>
+<!-- EDITORIAL STORY BLOCK: Signature Scents & Foliage Care Guide (Inspired by Grid Post 7 & 8) -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile md:px-margin">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Vignette 1: Scent Symphony -->
+<div class="bg-surface rounded-xl p-space-lg flex flex-col items-center text-center gap-space-sm shadow-xs">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-2xl">local_florist</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Pure Soy &amp; Clean Botanicals</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Poured in small batches in Bengaluru using ethically sourced soy flakes and IFRA certified aromatic oils free from paraffin and harsh pthalates.
+        </p>
+<span class="font-label-sm text-label-sm font-semibold text-primary uppercase tracking-widest mt-space-xs">Explore Fragrance Notes →</span>
+</div>
+<!-- Vignette 2: Bengaluru Native Packaging -->
+<div class="bg-surface rounded-xl p-space-lg flex flex-col items-center text-center gap-space-sm shadow-xs">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-2xl">nest_eco_leaf</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Root-Safe Local Transit</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Live plants are personally conditioned, watered, and hand-delivered within Bengaluru in honeycomb kraft cartons to eliminate transit shock.
+        </p>
+<span class="font-label-sm text-label-sm font-semibold text-primary uppercase tracking-widest mt-space-xs">City Delivery FAQ →</span>
+</div>
+<!-- Vignette 3: The Calm Duo Gifting -->
+<div class="bg-surface rounded-xl p-space-lg flex flex-col items-center text-center gap-space-sm shadow-xs">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-xs">
+<span class="material-symbols-outlined text-2xl">redeem</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Thoughtful Gifting Made Easy</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pair any table companion plant with an evening candle. Includes a handwritten seed-paper note card and customized unboxing experience.
+        </p>
+<span class="font-label-sm text-label-sm font-semibold text-primary uppercase tracking-widest mt-space-xs">Curate Your Gift Box →</span>
+</div>
+</div>
+</section>
+<!-- Interactive Modal / Slide-in Toast for Bag Feedback -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 hidden" id="quick-add-toast" style="transform: translate(-50%, 0px);">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+<span class="font-label-md text-label-md">Added to your calm ritual bag</span>
+<button class="font-label-sm text-label-sm underline text-secondary-fixed ml-2" onclick="document.getElementById('quick-add-toast').classList.add('hidden')">View Bag</button>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for adding item to bag with visual toast feedback
+  document.querySelectorAll('button[aria-label^="Add"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const toast = document.getElementById('quick-add-toast');
+      if (toast) {
+        toast.classList.remove('hidden');
+        toast.style.transform = 'translate(-50%, -10px)';
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.style.transform = 'translate(-50%, 0)';
+        }, 3200);
+      }
+    });
+  });
+
+  // Category pill active toggle state
+  const tabs = document.querySelectorAll('#collection-tabs button');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.className = 'px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-all flex items-center gap-2';
+      });
+      tab.className = 'px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap transition-all shadow-sm flex items-center gap-2';
+    });
+  });
+</script></main><aside class="hidden fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-container-lowest shadow-2xl flex flex-col" id="mini-cart-drawer"><div class="p-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">shopping_bag</span><h3 class="font-headline-sm text-headline-sm text-on-surface">Your Ritual Bag</h3><span class="font-label-sm text-label-sm text-on-surface-variant">(3)</span></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined">close</span></button></div><div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md"><div class="p-space-sm rounded-lg bg-surface-container flex gap-space-md"><div class="w-16 h-20 rounded bg-surface-variant flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined">potted_plant</span></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between items-start"><span class="font-label-md text-label-md text-on-surface font-semibold">Fiddle Leaf Fig &amp; Terracotta</span><button class="text-outline hover:text-error" type="button"><span class="material-symbols-outlined text-base">delete</span></button></div><span class="font-body-sm text-body-sm text-on-surface-variant">Hand-glazed Planter</span><span class="font-label-md text-label-md text-primary font-semibold">₹2,450</span></div></div></div><div class="p-space-lg bg-surface-container-low flex flex-col gap-space-sm"><div class="flex justify-between items-center"><span class="font-body-md text-body-md text-on-surface-variant">Subtotal</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹5,850</span></div><a class="w-full py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary text-center font-label-md text-label-md font-semibold transition-colors" data-path="checkout" href="#">Proceed to Checkout</a></div></aside><div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-start justify-center pt-24 px-margin-mobile" id="search-modal"><div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md"><div class="flex items-center gap-space-sm pb-space-sm"><span class="material-symbols-outlined text-on-surface-variant">search</span><input class="w-full bg-transparent font-subheading text-subheading text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search plants, artisan candles, rituals..." type="text"><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-wrap gap-space-xs pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-2 self-center">Suggested:</span><span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Monstera Deliciosa</span><span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Amber Soy Candle</span><span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Evening Serenity Duo</span></div></div></div><a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-30 flex items-center gap-space-xs px-4 py-3 rounded-full bg-secondary text-on-secondary shadow-[0_12px_32px_-4px_rgba(41,41,32,0.18)] hover:bg-primary transition-colors" href="https://wa.me/919999999999" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-xl">chat</span><span class="font-label-md text-label-md font-semibold">Chat with us</span></a><footer class="w-full bg-surface-container-low pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-lg">spa</span></div><span class="font-headline-sm text-headline-sm text-primary uppercase tracking-wide">The Calm Corner</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Slow down and inhabit the quiet rhythm of nature. We craft botanical spaces and clean, soy-wax fragrances designed to replenish everyday tranquility.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-base text-primary">pin_drop</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Handcrafted &amp; Rooted in Bengaluru, India</span></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Shop Collections</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="shop-all" href="#">Live Indoor Plants</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="the-green-edit-plants" href="#">Artificial Botanical Stems</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="the-glow-edit-candles" href="#">Scented Soy Candles</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="the-calm-duo-combos" href="#">The Calm Duos &amp; Gift Sets</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Customer Care</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="customer-care" href="#">Care &amp; Repotting Guides</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="customer-care" href="#">Shipping &amp; PAN India Returns</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="customer-care" href="#">Check PIN Code Delivery</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="customer-care" href="#">Frequently Asked Questions</a></div><div class="flex flex-col gap-space-md"><h4 class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Stay in Our Little Corner</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Receive notes on plant care rituals, seasonal launches, and quiet reflections.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-full bg-surface p-1 shadow-sm"><input class="w-full px-3 bg-transparent text-on-surface text-body-sm placeholder:text-outline focus:outline-none" placeholder="Your email address" type="email"><button class="px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">Join</button></div></div><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="font-label-sm text-label-sm font-medium">@thecalmcorner.life</span></div></div></div><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-lg flex flex-col md:flex-row justify-between items-center gap-space-sm text-on-surface-variant"><span class="font-label-sm text-label-sm">© 2024 The Calm Corner Private Limited. All rights reserved.</span><div class="flex gap-space-md"><a class="font-label-sm text-label-sm hover:text-primary" data-path="customer-care" href="#">Privacy Policy</a><a class="font-label-sm text-label-sm hover:text-primary" data-path="customer-care" href="#">Terms of Living</a><a class="font-label-sm text-label-sm hover:text-primary" data-path="customer-care" href="#">Sustainability</a></div></div></footer>
+
+</body></html>

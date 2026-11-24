@@ -1,0 +1,5 @@
+product_slug,product_title,product_type,shipping_class,sku,price_inr,description,light,water,difficulty,pet_safe,aroma_notes,badges,material,burn_hours,search_keywords,size,finish,scent,mrp_inr,weight_g,opening_stock,low_stock_threshold
+sample-fern,Sample fern (not for sale),live_plant,live_plant_bengaluru,SAMPLE-FERN-SAND,899,Placeholder live plant for local development.,low_light,moderate,easy,yes,,live_plant|local_transit,,,indoor plant,small,speckled sandstone,,999,900,12,3
+sample-fern,Sample fern (not for sale),live_plant,live_plant_bengaluru,SAMPLE-FERN-TERRA,849,,,,,,,,,,,small,raw terracotta,,949,880,2,3
+sample-faux-palm,Sample faux palm (not for sale),artificial_plant,standard,SAMPLE-PALM-M,1499,Placeholder artificial plant for local development.,,,,,,lifelike|zero_care,polyethylene,,,medium,matte olive,,1699,1200,20,5
+sample-candle,Sample soy candle (not for sale),candle,candle_protective,SAMPLE-CANDLE-LAV,649,Placeholder soy candle for local development.,,,,,lavender fog|warm vanilla,pure_soy|handcrafted,glass,40,scented candle,200g,,lavender fog,699,450,30,5

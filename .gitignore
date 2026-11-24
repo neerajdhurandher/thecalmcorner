@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+media/
+coverage/
+*.tsbuildinfo
+.DS_Store

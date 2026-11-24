@@ -1,0 +1,10 @@
+node_modules
+.next
+next-env.d.ts
+pnpm-lock.yaml
+src/payload-types.ts
+src/migrations
+src/app/(payload)/admin/importMap.js
+stitch_the_calm_corner_store
+docs
+the_calm_corner_prd_brief.md

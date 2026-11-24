@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: calm_corner_test
+          POSTGRES_USER: calm
+          POSTGRES_PASSWORD: local_ci_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U calm -d calm_corner_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgresql://calm:local_ci_password@localhost:5432/calm_corner_test
+      TEST_DATABASE_URL: postgresql://calm:local_ci_password@localhost:5432/calm_corner_test
+      PAYLOAD_SECRET: ci-only-secret-not-for-production-12345
+      SERVER_URL: http://localhost:3000
+      ALLOW_INSECURE_LOCAL: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.22.3
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm format:check
+      - run: pnpm typecheck
+      - run: pnpm audit --prod --audit-level high
+      - run: pnpm migrate
+      - run: pnpm generate:types && pnpm generate:importmap
+      - run: pnpm payload migrate:create --skip-empty
+      - name: Check generated files
+        run: |
+          git diff --exit-code -- src/payload-types.ts 'src/app/(payload)/admin/importMap.js' src/migrations
+          test -z "$(git ls-files --others --exclude-standard src/migrations)"
+      - run: pnpm build
+      - name: Build and smoke-test the container
+        run: |
+          docker build -t calm-corner:ci .
+          docker run -d --rm --name calm-corner-ci --network host \
+            -e DATABASE_URL="$DATABASE_URL" \
+            -e PAYLOAD_SECRET="$PAYLOAD_SECRET" \
+            -e SERVER_URL="$SERVER_URL" \
+            -e ALLOW_INSECURE_LOCAL=true calm-corner:ci
+          trap 'docker stop calm-corner-ci' EXIT
+          curl --fail --retry 20 --retry-connrefused --retry-delay 2 http://localhost:3000/health
+          node tests/bootstrap-smoke.mjs
+      - run: pnpm test
